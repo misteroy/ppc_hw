@@ -41,6 +41,9 @@ setup can be found at Freescale, search for AN2551.
   (You need to have a toolchain to cross-compile to ppc
   and an appropriate qemu-version. Instructions for these
   are forthcoming).
+  
+###Update for 22.04.1 LTS (Jammy Jellyfish)
+makefile is optimized for gcc-11
 
 ###Usage:
 *    `make`       -- compiles and links it.
