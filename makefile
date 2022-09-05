@@ -5,20 +5,25 @@
 # Modify $(QEMU) to where your qemu is located
 
 PROC=powerpc
-TYPE=eabi
+#TYPE=eabi
+TYPE=linux-gnu
 PREFIX=$(PROC)-$(TYPE)-
 #PATH:=/usr/local/bin:$(PATH)
+GCC_VERSION=11
 CFLAGS=-Iinc
 
-CC=$(PREFIX)gcc
-AS=$(PREFIX)as
-AR=$(PREFIX)ar
+#CC=$(PREFIX)gcc
+CC=$(PREFIX)gcc-$(GCC_VERSION)
+#AS=$(PREFIX)as
+#AS=$(PREFIX)as
+#AR=$(PREFIX)ar
 LD=$(PREFIX)ld
 NM=$(PREFIX)nm
 OBJDUMP=$(PREFIX)objdump
 OBJCOPY=$(PREFIX)objcopy
 
-QEMU=~/qemu/ppc-softmmu/qemu-system-ppc
+#QEMU=~/qemu/ppc-softmmu/qemu-system-ppc
+QEMU=/usr/bin/qemu-system-ppc
 
 .PHONY: all
 

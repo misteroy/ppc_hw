@@ -6,7 +6,7 @@ int putc_uart0(const char *s);
 int c_entry() {
 
   init_hw();  
-  putc_uart0("Test Hello world!\n");
+  putc_uart0("Hello world!\n");
 
   return 0;
 }
