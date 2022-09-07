@@ -58,6 +58,7 @@ makefile is optimized for gcc-11
 
 
 # How to connect with vscode to qemu (host) using gdb
+```json
 {
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
@@ -83,3 +84,4 @@ makefile is optimized for gcc-11
         }
     ]
 }
+```
