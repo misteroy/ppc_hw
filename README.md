@@ -55,3 +55,31 @@ makefile is optimized for gcc-11
  	  `/home/ara/gnutools-bin/powerpc-eabi/bin/powerpc-eabi-gdb -i=mi test.elf`
  	  in gdb: `target remote localhost:1234`
 
+
+
+# How to connect with vscode to qemu (host) using gdb
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+           "type": "gdb",
+            "request": "attach",
+            "name": "Attach to gdbserver",
+            "target": "localhost:1234",
+            "remote": true,
+            "printCalls": true,
+            "stopAtEntry": true,
+            "stopAtConnect": true,
+            "executable": "${workspaceFolder}/ppc/ppc_hw/test.elf",
+            "cwd": "${workspaceRoot}/ppc/ppc_hw/",
+            "gdbpath": "/usr/bin/gdb-multiarch",
+            "autorun": [
+                "set architecture powerpc:e500",
+                "file /home/chuckufarley/Projctes/ppc/ppc_hw/test.elf"
+            ]
+        }
+    ]
+}
