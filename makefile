@@ -52,7 +52,7 @@ clean :
 	rm -f -v *.o *.elf *.bin *.lst
 
 run:
-	$(QEMU) -cpu e500 -d guest_errors,unimp -M ppce500 -nographic -bios test.elf  -s
+	$(QEMU) -cpu e500 -d guest_errors,unimp,mmu,int -M ppce500 -nographic -bios test.elf  -s
 
 
 debug:
